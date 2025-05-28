@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <title>Text Editor</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="toolbar">
+        <button onclick="format('bold')" title="Bold">
+          <span class="material-symbols-outlined"> format_bold </span>
+        </button>
+        <button onclick="format('underline')" title="Underline">
+          <span class="material-symbols-outlined"> format_underlined </span>
+        </button>
+        <button onclick="format('italic')" title="Italic">
+          <span class="material-symbols-outlined"> format_italic </span>
+        </button>
+        <button title="Font Color">
+          <input
+            type="color"
+            id="fontColor"
+            oninput="format('foreColor',this.value);this.value='#000000';"
+          />
+        </button>
+
+        <button onclick="format('justifyLeft')" title="Left Align">
+          <span class="material-symbols-outlined"> format_align_left </span>
+        </button>
+        <button onclick="format('justifyCenter')" title="Center Align">
+          <span class="material-symbols-outlined"> format_align_center </span>
+        </button>
+        <button onclick="format('justifyRight')" title="Right Align">
+          <span class="material-symbols-outlined"> format_align_right </span>
+        </button>
+        <button onclick="format('justifyFull')" title="Align Justify">
+          <span class="material-symbols-outlined"> format_align_justify </span>
+        </button>
+        <button onclick="format('undo')" title="Undo">
+          <span class="material-symbols-outlined"> undo </span>
+        </button>
+        <button onclick="format('redo')" title="Redo">
+          <span class="material-symbols-outlined"> redo </span>
+        </button>
+      </div>
+      <div id="content" contenteditable="true"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
